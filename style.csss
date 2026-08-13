@@ -1,0 +1,334 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    color:#222;
+}
+
+
+
+header{
+    width:100%;
+    height:80px;
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#ff6b00;
+}
+
+.logo i{
+    margin-right:8px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    margin:0 18px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff6b00;
+}
+
+.login-btn{
+    border:none;
+    padding:12px 25px;
+    background:#2563eb;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#1747b8;
+}
+
+
+
+.hero{
+    height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    text-align:center;
+    color:white;
+}
+
+.overlay h1{
+    font-size:60px;
+    margin-bottom:20px;
+    font-weight:700;
+}
+
+.overlay p{
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.search-box{
+    display:flex;
+    justify-content:center;
+    background:white;
+    border-radius:60px;
+    overflow:hidden;
+    width:700px;
+    margin:auto;
+}
+
+.search-box input{
+    flex:1;
+    padding:18px;
+    border:none;
+    outline:none;
+    font-size:16px;
+}
+
+.search-box button{
+    width:180px;
+    border:none;
+    background:#ff6b00;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    background:#e95f00;
+}
+
+
+
+.categories{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:-50px;
+    padding:40px;
+}
+
+.card{
+    width:180px;
+    background:white;
+    border-radius:20px;
+    text-align:center;
+    padding:35px 20px;
+    font-size:45px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+    cursor:pointer;
+}
+
+.card h3{
+    margin-top:15px;
+    font-size:20px;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+
+
+.card:nth-child(1){
+    background:#ff8c42;
+    color:white;
+}
+
+.card:nth-child(2){
+    background:#8b5cf6;
+    color:white;
+}
+
+.card:nth-child(3){
+    background:#22c55e;
+    color:white;
+}
+
+.card:nth-child(4){
+    background:#0ea5e9;
+    color:white;
+}
+
+.card:nth-child(5){
+    background:#ef4444;
+    color:white;
+}
+
+
+
+.section{
+    width:90%;
+    margin:80px auto;
+}
+
+.section h2{
+    font-size:35px;
+    margin-bottom:35px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+
+
+.place{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.place:hover{
+    transform:translateY(-12px);
+}
+
+.place img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.content{
+    padding:20px;
+}
+
+.content h3{
+    margin-bottom:10px;
+}
+
+.content p{
+    color:#777;
+}
+
+
+
+.offers{
+    width:90%;
+    margin:80px auto;
+}
+
+.offers h2{
+    margin-bottom:30px;
+    font-size:35px;
+}
+
+.offer-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.offer{
+    background:linear-gradient(135deg,#ff6b00,#ff9800);
+    color:white;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    transition:.35s;
+}
+
+.offer:hover{
+    transform:scale(1.05);
+}
+
+.offer h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+
+
+footer{
+    margin-top:90px;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h2{
+    color:#ff8c42;
+    margin-bottom:15px;
+}
+
+footer p{
+    margin-top:10px;
+    color:#d1d5db;
+}
+
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+}
+
+nav{
+    margin:20px 0;
+}
+
+.overlay h1{
+    font-size:38px;
+}
+
+.overlay p{
+    font-size:17px;
+}
+
+.search-box{
+    width:95%;
+    flex-direction:column;
+    border-radius:15px;
+}
+
+.search-box button{
+    width:100%;
+    height:60px;
+}
+
+.categories{
+    margin-top:20px;
+}
+
+.card{
+    width:150px;
+}
+
+}
