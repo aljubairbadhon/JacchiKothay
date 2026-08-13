@@ -1,12 +1,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Welcome message
     setTimeout(() => {
         alert("👋 Welcome to JacchiKothay!\nDiscover the best places, events & offers near you.");
     }, 800);
 
-    // Smooth scrolling
+    
     document.querySelectorAll("nav a").forEach(link => {
         link.addEventListener("click", function (e) {
             let href = this.getAttribute("href");
@@ -25,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Search
     const searchBtn = document.querySelector(".search-box button");
     const searchInput = document.querySelector(".search-box input");
 
@@ -43,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Cards hover
+    
     const cards = document.querySelectorAll(".card,.place,.offer");
 
     cards.forEach(card => {
@@ -68,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // Scroll animation
+   
     const observer = new IntersectionObserver(entries => {
 
         entries.forEach(entry => {
@@ -85,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(sec);
     });
 
-    // Back to top button
+  
     const topBtn = document.createElement("button");
 
     topBtn.innerHTML = "⬆";
@@ -129,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // Footer
+
     const footer = document.querySelector("footer p:last-child");
 
     if (footer) {
