@@ -1,6 +1,6 @@
 JacchiKothay
 
-Project Overview
+
 JacchiKothay is a location-based web application designed to help users discover the best nearby places, exclusive offers, and local events. The platform aims to provide accurate and real-time information for restaurants, tourist attractions, shopping centers, hospitals, and other important locations.
 
 Features
