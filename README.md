@@ -17,7 +17,7 @@ Technologies
 - JavaScript
 - Node.js (Planned)
 
-Project Status
+Project Status:
 Work in Progress
 
 Future Enhancements
