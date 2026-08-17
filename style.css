@@ -80,7 +80,7 @@ nav a:hover{
 .hero {
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url("Assets/dhaka.png");
+        url("Assets/Dhaka.png");
 
     background-size: cover;
     background-position: center;
