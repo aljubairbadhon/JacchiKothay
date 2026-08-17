@@ -1,11 +1,5 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    setTimeout(() => {
-        alert("👋 Welcome to JacchiKothay!\nDiscover the best places, events & offers near you.");
-    }, 800);
-
-    
     document.querySelectorAll("nav a").forEach(link => {
         link.addEventListener("click", function (e) {
             let href = this.getAttribute("href");
