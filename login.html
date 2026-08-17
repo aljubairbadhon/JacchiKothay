@@ -6,77 +6,95 @@
 
     <title>Login - JacchiKothay</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="auth-page">
 
-    <header>
+    <nav class="navbar">
         <div class="logo">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>JacchiKothay</span>
+            📍 JacchiKothay
         </div>
 
-        <nav>
+        <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="index.html#explore">Explore</a>
             <a href="index.html#events">Events</a>
             <a href="index.html#offers">Offers</a>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
 
-    <main class="login-container">
+    <section class="auth-container">
 
-        <div class="login-box">
+        <div class="auth-box">
 
             <h1>Welcome Back!</h1>
 
-            <p>Login to discover amazing places, events and offers.</p>
+            <p>
+                Login to discover amazing places, events and offers.
+            </p>
 
             <form id="loginForm">
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        required>
-                </div>
+                <label for="loginEmail">Email</label>
 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Enter your password"
-                        required>
-                </div>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Enter your email"
+                    required
+                >
 
-                <div class="login-options">
+
+                <label for="loginPassword">Password</label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    required
+                >
+
+
+                <div class="remember-row">
+
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" id="rememberMe">
                         Remember me
                     </label>
 
-                    <a href="#">Forgot Password?</a>
+                    <a href="#" onclick="forgotPassword()">
+                        Forgot Password?
+                    </a>
+
                 </div>
 
-                <button type="submit" class="login-submit">
+
+                <button type="submit" class="auth-button">
                     Login
                 </button>
 
+                <p id="loginMessage"></p>
+
             </form>
 
-            <p class="register-text">
-                Don't have an account?
-                <a href="register.html">Create an account</a>
-            </p>
+
+            <div class="auth-switch">
+
+                <p>
+                    Don't have an account?
+                    <a href="register.html">Create an account</a>
+                </p>
+
+            </div>
 
         </div>
 
-    </main>
+    </section>
+
+
+    <script src="script.js"></script>
 
 </body>
 </html>
