@@ -68,22 +68,12 @@ nav a:hover{
     height:90vh;
     background:
     linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
-    url("images/hero.jpg");
+     url("Assets/Dhaka.png");
     background-size:cover;
     background-position:center;
     display:flex;
     justify-content:center;
     align-items:center;
-}
-
-
-.hero {
-    background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url("Assets/Dhaka.png");
-
-    background-size: cover;
-    background-position: center;
 }
 
 .overlay{
