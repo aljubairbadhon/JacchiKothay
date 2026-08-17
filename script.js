@@ -135,3 +135,161 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+const registerForm = document.getElementById("registerForm");
+
+if (registerForm) {
+
+    registerForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("registerName").value.trim();
+
+        const email = document.getElementById("registerEmail").value.trim();
+
+        const password = document.getElementById("registerPassword").value;
+
+        const confirmPassword = document.getElementById("confirmPassword").value;
+
+        const message = document.getElementById("registerMessage");
+
+
+        if (password !== confirmPassword) {
+
+            message.textContent = "Passwords do not match.";
+
+            message.style.color = "red";
+
+            return;
+        }
+
+
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+
+
+        const existingUser = users.find(function(user) {
+
+            return user.email === email;
+
+        });
+
+
+        if (existingUser) {
+
+            message.textContent = "An account with this email already exists.";
+
+            message.style.color = "red";
+
+            return;
+        }
+
+
+        const newUser = {
+
+            name: name,
+
+            email: email,
+
+            password: password
+
+        };
+
+
+        users.push(newUser);
+
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+
+        message.textContent = "Account created successfully!";
+
+        message.style.color = "green";
+
+        setTimeout(function() {
+
+            window.location.href = "login.html";
+
+        }, 1500);
+
+    });
+}
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+
+    loginForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const email = document.getElementById("loginEmail").value.trim();
+
+        const password = document.getElementById("loginPassword").value;
+
+        const rememberMe = document.getElementById("rememberMe").checked;
+
+        const message = document.getElementById("loginMessage");
+
+
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+
+        const user = users.find(function(user) {
+
+            return user.email === email &&
+                   user.password === password;
+
+        });
+
+
+        if (!user) {
+
+            message.textContent =
+                "Incorrect email or password.";
+
+            message.style.color = "red";
+
+            return;
+        }
+
+
+        localStorage.setItem(
+            "loggedInUser",
+            JSON.stringify(user)
+        );
+
+
+        if (rememberMe) {
+
+            localStorage.setItem(
+                "rememberMe",
+                "true"
+            );
+
+        }
+
+
+        message.textContent =
+            "Login successful!";
+
+        message.style.color = "green";
+
+
+        setTimeout(function() {
+
+            window.location.href = "index.html";
+
+        }, 1000);
+
+    });
+}
+
+
+function forgotPassword() {
+
+    alert(
+        "Password recovery will be available in a future version."
+    );
+
+}
