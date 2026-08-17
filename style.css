@@ -76,6 +76,16 @@ nav a:hover{
     align-items:center;
 }
 
+
+.hero {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("assets/dhaka.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
 .overlay{
     text-align:center;
     color:white;
